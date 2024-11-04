@@ -21,6 +21,12 @@ public class ClienteBO {
         return clienteDAO.findByCodigo(idCliente);
     }
 
+    public ClienteTO findByEmail(String txEmail) {
+        clienteDAO = new ClienteDAO();
+        // Aqui se implementa a regra de negócio
+        return clienteDAO.findByEmail(txEmail);
+    }
+
     public ClienteTO save(ClienteTO cliente){
         clienteDAO = new ClienteDAO();
         // Validação do CPF

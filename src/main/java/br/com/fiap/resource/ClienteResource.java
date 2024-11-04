@@ -18,7 +18,7 @@ public class ClienteResource {
     public Response findAll(){
         ArrayList<ClienteTO> resultado = clienteBO.findAll();
         Response.ResponseBuilder response = null;
-        if (response != null){
+        if (resultado != null){
             response = Response.ok(); // 200 (Ok)
         } else {
             response = Response.status(404);
@@ -26,15 +26,16 @@ public class ClienteResource {
         response.entity(resultado);
         return response.build();
     }
+
     @GET
-    @Path("/{id_cliente}")
+    @Path("/{txEmail}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response findByCodigo(@PathParam("id_cliente") Long idCliente){
-        ClienteTO resultado = clienteBO.findByCodigo(idCliente);
+    public Response findByEmail(@PathParam("txEmail") String txEmail) {
+        ClienteTO resultado = clienteBO.findByEmail(txEmail);
         Response.ResponseBuilder response = null;
         if (resultado != null) {
             response = Response.ok();
-        }else {
+        } else {
             response = Response.status(404);
         }
         response.entity(resultado);

@@ -9,6 +9,7 @@ public class CarroTO {
     @NotNull private Long kmRodado;
     @NotNull
     private LocalDate ano;
+    private Long idCliente;
     @NotNull private String marca;
     @NotNull private String modelo;
     @NotNull private String placa;
@@ -16,13 +17,22 @@ public class CarroTO {
     public CarroTO() {
     }
 
-    public CarroTO(Long idCarro, @NotNull Long kmRodado, @NotNull LocalDate ano, @NotNull String marca, @NotNull String modelo, @NotNull String placa) {
+    public CarroTO(Long idCarro, Long idCliente, @NotNull Long kmRodado, @NotNull LocalDate ano, @NotNull String marca, @NotNull String modelo, @NotNull String placa) {
+        this.idCliente = idCliente;
         this.idCarro = idCarro;
         this.kmRodado = kmRodado;
         this.ano = ano;
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
+    }
+
+    public Long getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
     }
 
     public Long getIdCarro() {

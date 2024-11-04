@@ -31,8 +31,6 @@ public class ClienteDAO extends Repository {
             closeConnection();
         }
         return clientes;
-
-
     }
 
     public ClienteTO findByCodigo (Long idCliente){
@@ -42,6 +40,31 @@ public class ClienteDAO extends Repository {
             ps.setLong(1,idCliente);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
+                cliente.setIdCliente(rs.getLong("id_cliente"));
+                cliente.setNmCliente(rs.getString("nm_cliente"));
+                cliente.setNrCpf(rs.getLong("nr_cpf"));
+                cliente.setTxEmail(rs.getString("tx_email"));
+                cliente.setTxSenha(rs.getString("tx_senha"));
+            }else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Erro na consulta: " + e.getMessage());
+        }finally {
+            closeConnection();
+        }
+        return cliente;
+    }
+
+    public ClienteTO findByEmail(String txEmail){
+        ClienteTO cliente = new ClienteTO();
+        String sql = "SELECT * from T_LELE_CLIENTE where tx_email = ?";
+        try (PreparedStatement ps = getConnection().prepareStatement(sql)){
+            ps.setString(1,txEmail);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                cliente.setIdCliente(rs.getLong("id_cliente"));
                 cliente.setNmCliente(rs.getString("nm_cliente"));
                 cliente.setNrCpf(rs.getLong("nr_cpf"));
                 cliente.setTxEmail(rs.getString("tx_email"));

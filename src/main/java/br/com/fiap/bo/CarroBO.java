@@ -20,6 +20,12 @@ public class CarroBO {
         return carroDAO.findByCodigo(idCarro);
     }
 
+    public CarroTO findByCodigoCliente(Long idCliente) {
+        carroDAO = new CarroDAO();
+        // aqui se implementa a regra de negócio
+        return carroDAO.findByCodigoCliente(idCliente);
+    }
+
     public CarroTO save(CarroTO carro){
         carroDAO = new CarroDAO();
         // Validação de ano

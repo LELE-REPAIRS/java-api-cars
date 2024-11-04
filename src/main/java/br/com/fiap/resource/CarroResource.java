@@ -42,6 +42,21 @@ public class CarroResource {
         return response.build();
     }
 
+    @GET
+    @Path("/cliente/{id_cliente}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response findByCodigoCliente(@PathParam("id_cliente") Long idCliente){
+        CarroTO resultado = carroBO.findByCodigoCliente(idCliente);
+        Response.ResponseBuilder response = null;
+        if (resultado != null) {
+            response = Response.ok();
+        }else {
+            response = Response.status(404);
+        }
+        response.entity(resultado);
+        return response.build();
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response save(@Valid CarroTO carro){

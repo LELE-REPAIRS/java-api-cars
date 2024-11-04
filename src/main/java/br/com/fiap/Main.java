@@ -28,18 +28,19 @@ public class Main {
 
         rc.register(JsonBindingFeature.class);
         rc.register(CorsFilter.class);
-
-        String port = System.getenv("PORT");
-        if (port == null || port.isEmpty()) {
-            port = "8080";
-        }
-
-        URI baseUri = URI.create("http://0.0.0.0:" + port + "/");
+//
+//        String port = System.getenv("PORT");
+//        if (port == null || port.isEmpty()) {
+//            port = "8080";
+//        }
+//
+//        URI baseUri = URI.create("http://0.0.0.0:" + port + "/");
 
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
-        return GrizzlyHttpServerFactory.createHttpServer(baseUri, rc);
+        // return GrizzlyHttpServerFactory.createHttpServer(baseUri, rc);
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
 
     /**

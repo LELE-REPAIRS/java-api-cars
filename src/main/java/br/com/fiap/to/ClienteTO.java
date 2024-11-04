@@ -22,7 +22,6 @@ public class ClienteTO {
         this.idCliente = idCliente;
     }
 
-
     public long getIdCliente() {
         return idCliente;
     }
