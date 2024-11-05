@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-# Challange Tech - Porto Seguro - Domain Driven Design using java - Sprint 6
+# Challange Tech - Porto Seguro - Domain Driven Design using Java - Sprint 6
 
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen) ![Static Badge](https://img.shields.io/badge/Version-1.0.0-black)
 
