@@ -20,7 +20,7 @@ Sistema que disponibiliza um chatbot para fornecer ajuda com os problemas do cot
 
 ## 🛠️ Tecnologias Utilizadas
 
-* [![Static Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+* [![Static Badge](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 * [![Static Badge](https://img.shields.io/badge/Java-323330?style=for-the-badge&logo=Java&logoColor=F7DF1E)](https://img.shields.io/badge/Java-323330?style=for-the-badge&logo=Java&logoColor=F7DF1E)
 <p align="right"><a href="#readme-top">Voltar ao topo</a></p>
 
