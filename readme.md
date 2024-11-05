@@ -30,7 +30,7 @@ Para iniciar o projeto faz se necessário seguir algumas etapas abaixo:
 
 ### 📝 Pré-requisitos
 * Intellij ou IDE da sua preferência;
-* Java 21 SDK: Instale a versao do Java 21 em seu computador (Versão Latest).
+* Java 21 SDK: Instale a versão do Java 21 em seu computador (Versão Latest).
 
 ### 🗃️ Instalação
 1. Clone o repositório para a sua pasta:
